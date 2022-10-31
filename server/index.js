@@ -38,7 +38,12 @@ const io = new Server(server, {
             message: `Welcome ${username}`,
             username: CHAT_BOT,
             __createdtime__,
-          });
+        });
+        chatRoom=room
+        allUsers=push({id:socket.id, username,room});
+        chatRoomUsers= allUsers.filter((user)=>user.room == room);
+        socket.to(room).emit('chatroom_users', chatRoomUsers);
+        socket.emit('chatroom_users', chatRoomUsers);
       });
   });
 
