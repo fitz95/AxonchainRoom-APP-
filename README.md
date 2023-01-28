@@ -31,7 +31,11 @@ This is an in house application built in React that permits in house developers 
 VS Code
 
 ### Tech Stack <a name="tech-stack"></a>
-
+Javascript 
+Html 
+Css 
+React 
+Redux
 
 <details>
   <summary>Client</summary>
